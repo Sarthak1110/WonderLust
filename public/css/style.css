@@ -54,7 +54,7 @@ body{
 }
 
 /* HOME PAGE */
-.card{
+.listing-card{
     border: none !important;
     margin: 0rem !important;
 }
