@@ -95,3 +95,20 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
+/* MAP */
+#map {
+    height: 400px;
+    width: 80vp;
+
+    }
+
+    .booking-popup .mapboxgl-popup-content {
+  background: #3b82f6;      /* blue background */
+  color: #fff;              /* white text */
+  border-radius: 12px;      /* rounded “shape” */
+  padding: 12px 16px;       /* make it roomier */
+  font-family: system-ui;
+}
+.booking-popup .mapboxgl-popup-tip {
+  border-top-color: #3b82f6;  /* arrow matches bg */
+}
