@@ -76,7 +76,7 @@ const sessionOptions={
 // });
 
 const Listing = require("./models/listing");
-const initData = require("./seeds/data");
+const initData = require("./seeds/index.js");
 
 app.get("/seed-listings", async (req, res) => {
     await Listing.deleteMany({});
