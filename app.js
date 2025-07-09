@@ -75,6 +75,19 @@ const sessionOptions={
 //     res.send("Request received at /");
 // });
 
+const Listing = require("./models/listing");
+const initData = require("./seeds/data");
+
+app.get("/seed-listings", async (req, res) => {
+    await Listing.deleteMany({});
+    const listingsWithOwner = initData.data.map(obj => ({
+        ...obj,
+        owner: "6860411b28069cbdefcec199"
+    }));
+    await Listing.insertMany(listingsWithOwner);
+    res.send("Seeded sample listings to MongoDB!");
+});
+
 app.use(session(sessionOptions));
 app.use(flash()); 
 
